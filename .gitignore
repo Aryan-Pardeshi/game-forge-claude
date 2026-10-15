@@ -9,3 +9,8 @@ node_modules
 .vite-cache
 .claude/.setup-done
 .tools/
+/assets/*
+!/assets/CATALOG.md
+!/assets/catalog.json
+!/assets/LICENSES.md
+*.part

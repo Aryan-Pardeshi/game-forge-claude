@@ -30,6 +30,16 @@ Skip if `node_modules/vite` and `node_modules/playwright` both exist and `packag
 npm install
 ```
 
+## 2b. Asset library (~2 GB)
+
+The repo ships only the asset catalog; the models, textures, skies and sounds come from [npmiaman/game-forge](https://github.com/npmiaman/game-forge). Skip if `assets/models` and `assets/textures` already exist and the script reports 0 to download. Otherwise:
+
+```
+node scripts/fetch-assets.mjs
+```
+
+It downloads ~10,000 files in parallel (no git needed), shows progress, and resumes if interrupted: just run it again. Tell the user it's the big download (a few minutes on fast internet). Run it in the background if your shell supports it, and do step 3 meanwhile.
+
 ## 3. Playtest browser (Chromium for Playwright)
 
 ```

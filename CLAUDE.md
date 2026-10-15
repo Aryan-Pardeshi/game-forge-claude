@@ -1,4 +1,4 @@
-> **First run:** if `.claude/.setup-done` does not exist, read [SETUP.md](SETUP.md) and run every step before anything else (it installs Node, the npm packages and the playtest browser). Then continue with the request.
+> **First run:** if `.claude/.setup-done` does not exist, read [SETUP.md](SETUP.md) and run every step before anything else (it installs Node, the npm packages, the asset library and the playtest browser). Then continue with the request.
 
 @AGENTS.md
 

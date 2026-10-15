@@ -10,10 +10,11 @@ const [major, minor] = process.versions.node.split('.').map(Number);
 const missing = [];
 if (major < 20 || (major === 20 && minor < 19)) missing.push(`Node ${process.versions.node} is too old (need 20.19+)`);
 if (!has('node_modules/vite') || !has('node_modules/playwright')) missing.push('npm packages are not installed');
+if (!has('assets/models') || !has('assets/textures')) missing.push('the asset library is not downloaded');
 if (!has('.claude/.setup-done')) missing.push('first-run setup has not been completed');
 
 if (missing.length) {
   console.log(`FIRST RUN: this Game Forge checkout is not set up yet (${missing.join('; ')}).
-Before doing anything else, read SETUP.md and run every step in it: it installs Node if needed, the npm packages and the playtest browser, then checks that a game builds and screenshots. Tell the user in one line that you're setting things up (takes a few minutes), then continue with their request.`);
+Before doing anything else, read SETUP.md and run every step in it: it installs Node if needed, the npm packages, the asset library and the playtest browser, then checks that a game builds and screenshots. Tell the user in one line that you're setting things up (takes a few minutes), then continue with their request.`);
 }
 process.exit(0);

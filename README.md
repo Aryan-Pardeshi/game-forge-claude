@@ -2,7 +2,7 @@
 
 **Clone it, run `claude`, describe a game.** Claude Code sets everything up by itself on the first run (Node.js if missing, npm packages, the playtest browser), then builds your game, playtests it, and hands you something playable.
 
-This is a clone-and-run version of **[Game Forge](https://github.com/npmiaman/game-forge) by Aman Pandit ([@npmiaman](https://github.com/npmiaman))**: the same game kit, templates, skills and full CC0 asset library (2 GB, including the realistic textures, HDRI skies, Poly Haven props and Rocketbox people), without the desktop Studio app. All credit for the engine goes to him; see [LICENSE](LICENSE).
+This is a clone-and-run version of **[Game Forge](https://github.com/npmiaman/game-forge) by Aman Pandit ([@npmiaman](https://github.com/npmiaman))**: the same game kit, templates and skills, without the desktop Studio app. The full CC0 asset library (2 GB: models, realistic textures, HDRI skies, Poly Haven props, Rocketbox people) downloads from his repo on first run. All credit for the engine goes to him; see [LICENSE](LICENSE).
 
 ## Quick start
 
@@ -14,7 +14,7 @@ cd game-forge-claude
 claude
 ```
 
-On the first session Claude reads [SETUP.md](SETUP.md) and installs what's missing (a few minutes; a SessionStart hook and `CLAUDE.md` both point it there). Then say what you want:
+On the first session Claude reads [SETUP.md](SETUP.md) and installs what's missing, including the 2 GB asset library (a few minutes; a SessionStart hook and `CLAUDE.md` both point it there). Then say what you want:
 
 > *make a 3D arena shooter with really nice graphics*
 
@@ -22,7 +22,6 @@ Claude picks the closest template, scaffolds `games/<your-game>/`, builds it, bo
 
 Play your games with `npm run dev` (the arcade at http://localhost:5173) or `npm run play -- <slug>`.
 
-The clone is about 2 GB because the whole asset library is in the repo. For a faster clone: `git clone --depth 1 …`.
 
 ## Asset library
 
