@@ -1,0 +1,68 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": [
+              "${CLAUDE_PROJECT_DIR}/scripts/hooks/typecheck.mjs"
+            ],
+            "timeout": 30,
+            "statusMessage": "Type-checking…"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": [
+              "${CLAUDE_PROJECT_DIR}/scripts/hooks/session-start.mjs"
+            ],
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/shot.mjs:*)",
+      "Bash(npm run build)",
+      "Bash(npm run check)",
+      "Bash(npm run new:*)",
+      "Bash(npm run play:*)",
+      "Bash(npm run ship:*)",
+      "Bash(npm run shot:*)",
+      "Bash(npx tsc --noEmit -p .)",
+      "PowerShell(node scripts/shot.mjs:*)",
+      "PowerShell(npm run build)",
+      "PowerShell(npm run check)",
+      "PowerShell(npm run new:*)",
+      "PowerShell(npm run play:*)",
+      "PowerShell(npm run ship:*)",
+      "PowerShell(npm run shot:*)",
+      "PowerShell(npx tsc --noEmit -p .)",
+      "Bash(npm install)",
+      "Bash(npm ci)",
+      "Bash(npx playwright install:*)",
+      "Bash(node --version)",
+      "Bash(node -e:*)",
+      "Bash(winget install OpenJS.NodeJS.LTS:*)",
+      "Bash(git --version)",
+      "PowerShell(npm install)",
+      "PowerShell(npm ci)",
+      "PowerShell(npx playwright install:*)",
+      "PowerShell(node --version)",
+      "PowerShell(node -e:*)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS:*)",
+      "PowerShell(git --version)"
+    ]
+  }
+}

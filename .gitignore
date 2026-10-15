@@ -1,0 +1,11 @@
+node_modules
+/dist
+/ship
+.shots
+.scratch
+.DS_Store
+.claude/settings.local.json
+*.log
+.vite-cache
+.claude/.setup-done
+.tools/

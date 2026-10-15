@@ -1,0 +1,47 @@
+{
+  "name": "game-forge-claude",
+  "private": true,
+  "version": "0.2.2",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "dev": "vite --open /",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit",
+    "preview": "node scripts/preview.mjs",
+    "new": "node scripts/new-game.mjs",
+    "shot": "node scripts/shot.mjs",
+    "play": "node scripts/play.mjs",
+    "ship": "node scripts/ship.mjs",
+    "assets": "node scripts/assets.mjs",
+    "fixes": "node scripts/fixes.mjs",
+    "thumbs": "node scripts/thumbs.mjs",
+    "ask": "node scripts/ask.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/orbitron": "^5.3.0",
+    "@fontsource/press-start-2p": "^5.3.0",
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/extensions": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
+    "@tweakpane/core": "^2.0.5",
+    "@types/three": "^0.186.0",
+    "diff": "^8.0.4",
+    "n8ao": "^2.0.1",
+    "phaser": "^4.2.1",
+    "playwright": "^1.63.0",
+    "postprocessing": "6.39",
+    "three": "^0.186.1",
+    "tweakpane": "^4.0.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3",
+    "zzfx": "^1.4.0"
+  },
+  "description": "Game Forge for Claude Code: clone, run claude, it installs everything itself. Based on npmiaman/game-forge.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "author": "Aman Pandit (npmiaman)",
+  "repository": "github:Aryan-Pardeshi/game-forge-claude"
+}
