@@ -32,7 +32,7 @@ npm install
 
 ## 2b. Asset library (~2 GB)
 
-The repo ships only the asset catalog; the models, textures, skies and sounds come from [npmiaman/game-forge](https://github.com/npmiaman/game-forge). Skip if `assets/models` and `assets/textures` already exist and the script reports 0 to download. Otherwise:
+The repo ships the catalog plus a small starter set (all sounds and sprites, 7 stylised model packs, 6 textures, 2 skies, ~100 MB), so simple games work right away. The rest (realistic textures, HDRI skies, Poly Haven props, Rocketbox people, every other pack) comes from [npmiaman/game-forge](https://github.com/npmiaman/game-forge). Skip if `assets/.full` exists. Otherwise:
 
 ```
 node scripts/fetch-assets.mjs

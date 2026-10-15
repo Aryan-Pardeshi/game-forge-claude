@@ -1,7 +1,7 @@
 // Download the asset library (~2 GB, ~10,000 files) from npmiaman/game-forge into assets/.
 // Node builtins only, no git needed. Skips files already present with the right size, so it resumes.
 //   node scripts/fetch-assets.mjs [--ref main] [--jobs 16]
-import { createWriteStream, existsSync, mkdirSync, renameSync, statSync } from 'node:fs';
+import { createWriteStream, existsSync, mkdirSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
@@ -41,4 +41,5 @@ await Promise.all(Array.from({ length: JOBS }, async () => {
   }
 }));
 if (failed.length) { console.error(`${failed.length} failed (re-run to retry):\n${failed.slice(0, 10).join('\n')}`); process.exit(1); }
+writeFileSync(join(ROOT, 'assets/.full'), tree.sha);   // the SessionStart hook checks for this
 console.log('assets ready');

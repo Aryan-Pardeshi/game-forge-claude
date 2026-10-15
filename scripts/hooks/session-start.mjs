@@ -10,7 +10,7 @@ const [major, minor] = process.versions.node.split('.').map(Number);
 const missing = [];
 if (major < 20 || (major === 20 && minor < 19)) missing.push(`Node ${process.versions.node} is too old (need 20.19+)`);
 if (!has('node_modules/vite') || !has('node_modules/playwright')) missing.push('npm packages are not installed');
-if (!has('assets/models') || !has('assets/textures')) missing.push('the asset library is not downloaded');
+if (!has('assets/.full')) missing.push('only the starter assets are here; the full library is not downloaded');
 if (!has('.claude/.setup-done')) missing.push('first-run setup has not been completed');
 
 if (missing.length) {

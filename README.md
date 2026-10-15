@@ -2,7 +2,7 @@
 
 **Clone it, run `claude`, describe a game.** Claude Code sets everything up by itself on the first run (Node.js if missing, npm packages, the playtest browser), then builds your game, playtests it, and hands you something playable.
 
-This is a clone-and-run version of **[Game Forge](https://github.com/npmiaman/game-forge) by Aman Pandit ([@npmiaman](https://github.com/npmiaman))**: the same game kit, templates and skills, without the desktop Studio app. The full CC0 asset library (2 GB: models, realistic textures, HDRI skies, Poly Haven props, Rocketbox people) downloads from his repo on first run. All credit for the engine goes to him; see [LICENSE](LICENSE).
+This is a clone-and-run version of **[Game Forge](https://github.com/npmiaman/game-forge) by Aman Pandit ([@npmiaman](https://github.com/npmiaman))**: the same game kit, templates and skills, without the desktop Studio app. A small starter set of CC0 assets is included; the full library (2 GB: realistic textures, HDRI skies, Poly Haven props, Rocketbox people, every model pack) downloads from his repo on first run. All credit for the engine goes to him; see [LICENSE](LICENSE).
 
 ## Quick start
 
